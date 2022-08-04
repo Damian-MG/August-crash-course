@@ -8,4 +8,26 @@ Once you have accumulated the counts for each hour, print out the counts,
 sorted by hour as shown below.
 '''
 
+file_name = input("Enter file name:")
+if len(file_name) < 1 : file_name = 'mbox-short.txt'
+file_handler = open(file_name)
+
+hours = list()
+hours_dict = dict()
+
+for line in file_handler:
+    if line.startswith('From '):
+        i = line.find(':')
+        hours.append(line[i-2:i])
+
+for hour in hours:
+    hours_dict[hour] = hours_dict.get(hour,0) + 1
+
+tuples = list()
+for key, value in hours_dict.items():
+    newtup = (key,value)
+    tuples.append(newtup)
+
+for key, value in tuples:
+    print(key, value)
 
