@@ -1,0 +1,18 @@
+What does CRAN stand for?
+Comprehensive R Archive Network
+
+What does base R focus on?
+Graphics
+
+What is the output when you type into R: mean(mtcars$mpg) ?
+20.09062
+
+Why are we using R for the course track?
+R is one of the most widely used programming languages for Data Science.
+
+How do you see a command you have previously run and save it to source?
+History tab > Highlight command > To Source
+
+How would you install the package ggplot2?
+install.packages("ggplot2")
+

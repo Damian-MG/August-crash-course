@@ -1,0 +1,40 @@
+# Quiz 1
+
+Which of the following is an example of structured data?
+A database of individual's addresses, phone numbers, and post codes
+
+Which is NOT one of the three V's of Big Data? (Velocity, variety, volume)
+vexing, visible, vast
+
+Which of these is NOT one of the main skills embodied by data scientists? (hacking skills, math and statistics, substantive expertise)
+artificial intelligence
+
+Which of these is an example of a quantitative variable?
+weight, height, color
+
+Quantitative variables are measured on ordered, continuous scales. TRUE
+
+What is the most important thing in Data Science?
+The question you are trying to answer
+
+Which of these might be a good title for a forum post?
+Removing rows with NAs in data.frame using subset(), R 3.4.3
+
+Which is a characteristic of a good question when posting to message boards?
+Explicitly lists versions of software being used
+
+Which is NOT a good strategy for finding the answer to a problem in this course?
+Posting homework assignments to mailing lists
+
+Which of these are an effective way to communicate the findings of your analysis?
+Write a blog post
+Write a scientific article
+
+What's the first step in the data science process?
+Generating the question
+
+
+
+
+
+
