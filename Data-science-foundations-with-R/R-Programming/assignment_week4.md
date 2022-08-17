@@ -19,7 +19,7 @@ outcome[, lapply(.SD
                  , col="lightblue")
         , .SDcols = (11)]
 ```
-![](https://github.com/Damian-MG/August-crash-course/tree/main/Data-science-foundations-with-R/R-Programming/Hospital_30_day_death.png)
+![](https://github.com/Damian-MG/August-crash-course/blob/main/Data-science-foundations-with-R/R-Programming/Hospital_30_day_death.png)
 ###  Part 2 Finding the best hospital in a state 
 ```R
 best <- function(state, outcome) {
