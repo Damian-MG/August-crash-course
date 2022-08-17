@@ -107,7 +107,7 @@ This assignment will be graded via peer assessment.
 
 ## R Programming Project 2
 ### Submitted another assignment for this, but cannot find it so used the one below for complete documentation of specialization
-### [UtkarshPathrabe](https://github.com/UtkarshPathrabe/R-Programming-Johns-Hopkins-Bloomberg-School-of-Public-Health-Coursera/blob/master/programming-assignment-2/cachematrix.R)
+
 ```R
 ## A pair of functions that cache the inverse of a matrix
 
