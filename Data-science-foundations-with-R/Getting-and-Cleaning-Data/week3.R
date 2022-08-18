@@ -80,3 +80,57 @@ ftable(xt)
 fakeData = rnorm(1e5)
 object.size(fakeData)
 print(object.size(fakeData),units="Mb")
+
+## CREATING NEW VARIABLES
+fileUrl <- "https://data.baltimorecity.gov/api/views/k5ry-ef3g/rows.csv?accessType=DOWNLOAD"
+download.file(fileUrl,destfile = "restaurants.csv", method = "curl")
+restData <- read.csv("restaurants.csv")
+# Creating SEQUENCES
+s1 <- seq(1,10,by=2) ; s1
+s2 <- seq(1,10,length=3) ; s2
+x <- c(1,3,8,25,100); seq(along = x)
+
+# Easier cutting
+install.packages("Hmisc")
+library(Hmisc)
+
+## RESHAPING DATA
+install.packages("reshape2")
+library(reshape2)
+head(mtcars)
+# Melting data frames
+mtcars$carname <- rownames(mtcars)
+carMelt <- melt(mtcars,id=c("carname","gear","cyl"),measure.vars =c("mpg","hp"))
+head(carMelt,n=3)
+tail(carMelt,n=3)
+# casting data frames
+cylData <- dcast(carMelt, cyl ~ variable)
+cylData
+cylData <- dcast(carMelt, cyl ~ variable, mean)
+cylData
+
+# Average values
+head(InsectSprays)
+tapply(InsectSprays$count,InsectSprays$spray,sum)
+# or split
+spIns = split(InsectSprays$count, InsectSprays$spray)
+spIns
+
+sprCount = lapply(spIns,sum)
+sprCount
+
+unlist(sprCount)
+sapply(spIns,sum)
+
+# CREATING A NEW VARIABLE
+spraySums <- ddply(InsectSprays,.(spray),summarize,sum=ave(count,FUN=sum))
+dim(spraySums)
+head(spraySums)
+
+## MANAGING DATA FRAMES WITH DPLYR
+install.packages("dplyr")
+library(dplyr)
+
+## MERGING DATA
+# merging datasets with one column (common name), we tell merge the variable
+mergedData = merge(ds1,ds2,by.x="variable",by.y="variable",all=TRUE)
